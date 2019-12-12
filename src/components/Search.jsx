@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Error from './Error';
 
-const Search = () => {
+const Search = ({ setKeyWord }) => {
 
     const [ keywordSearch , setKeyWordSearch ] = useState('');
     const [ error, setError ] = useState(false);
@@ -12,6 +12,7 @@ const Search = () => {
          if(keywordSearch === ""){
              setError(true);
          }else{
+            setKeyWord(keywordSearch);
             setError(false);
          }
     }

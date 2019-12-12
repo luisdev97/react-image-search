@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Search from './components/Search';
 
 function App() {
+
+  const [ keyword, setKeyWord ] = useState('');
+
+  const getImagesFromAPI = async() => {
+    const url = "";
+    const res = await axios.get(url);
+  }
+
+  useEffect(() => {
+
+  });
+
   return (
     <div className="app container">
 
@@ -10,7 +22,7 @@ function App() {
       </div>
 
       <div className="row justify-content-center">
-        <Search/>
+        <Search setKeyWord={ setKeyWord }/>
       </div>
     </div>
   );
